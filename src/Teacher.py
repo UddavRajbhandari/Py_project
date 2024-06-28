@@ -89,14 +89,15 @@ class Teacher:
             None
         """
         data = read_file("data_files/Student.json")
-        name = input("Enter the name of the student")
+        Name = input(" Enter the name of the student ")
         for name in data:
-            print(f"Name of the student is {data['name']}")
-            print(f"Email of the student is {data['email']}")
-            print(f"Phone number of the student is {data['phone_number']}")
-            print(f"Roll number of the student is {data['roll_number']}")
-            print(f"marks of the student is {data['marks']}")
-            print(f"percentage of the student is {data['percentage']}")
+            print(name)
+            print(f"Name of the student is {name['Name']}")
+            print(f"Email of the student is {name['email']}")
+            print(f"Phone number of the student is {name['phone_number']}")
+            print(f"Roll number of the student is {name['roll_number']}")
+            print(f"marks of the student is {name['marks']}")
+            print(f"percentage of the student is {name['percentage']}")
                 
             
     def delete(self):
@@ -113,8 +114,8 @@ class Teacher:
                 
 if __name__ == "__main__":
     teacher = Teacher()
-    teacher.accept()
-    teacher.display_all()
+   # teacher.accept()
+    # teacher.display_all()
     teacher.search()
     teacher.delete()
 

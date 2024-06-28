@@ -33,12 +33,12 @@ class Student(Teacher):
         """
         self.input_data()
         data = [{
-            "name":self.name,
-            "roll_number":self.roll_number,
-            "marks":self.marks,
-            "address":self.address,
-            "email":self.email,
-            "phone_number":self.phone_number
+            "Name":self.name,
+            "Roll_number":self.roll_number,
+            "Marks":self.marks,
+            "Address":self.address,
+            "Email":self.email,
+            "Phone_number":self.phone_number
         }]
         append_file("data_files/Student.json",data)
             

@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "hari",
+        "Roll_number": "45",
+        "Marks": {
+            "C": 34,
+            "Maths": 56,
+            "Python": 67
+        },
+        "Address": "kathmandu",
+        "Email": "harib@gmail.com",
+        "Phone_number": "5453433246"
+    },
+    {
+        "Name": "ram",
+        "Roll_number": "43",
+        "Marks": {
+            "C": 74,
+            "Maths": 76,
+            "Python": 60
+        },
+        "Address": "kathmandu",
+        "Email": "rambhahadu@gmail.com",
+        "Phone_number": "9023435234"
+    }
+]
