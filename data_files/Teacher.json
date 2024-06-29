@@ -1,18 +1,18 @@
 [
     {
-        "name": "hari",
-        "subject": "physics",
-        "id": 45,
+        "name": "roheet",
+        "subject": "python",
+        "id": 31,
         "address": "bhaktpur",
-        "email": "haribil@gmail.com",
-        "phone_number": "3454234312"
+        "email": "roheet@gmail.com",
+        "phone_number": "9983433534"
     },
     {
-        "name": "ram",
-        "subject": "Maths",
-        "id": 245,
-        "address": "Lalitpur",
-        "email": "rambil@gmail.com",
-        "phone_number": "5654234312"
+        "name": "pandey",
+        "subject": "Probability",
+        "id": 55,
+        "address": "kathmandu",
+        "email": "pandeyji@gmail.com",
+        "phone_number": "9843234534"
     }
 ]

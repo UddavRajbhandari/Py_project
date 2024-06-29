@@ -1,7 +1,7 @@
 [
     {
         "Name": "hari",
-        "Roll_number": "45",
+        "Roll_number": 34,
         "Marks": {
             "C": 34,
             "Maths": 56,
@@ -13,7 +13,7 @@
     },
     {
         "Name": "ram",
-        "Roll_number": "43",
+        "Roll_number": 24,
         "Marks": {
             "C": 74,
             "Maths": 76,
@@ -22,5 +22,89 @@
         "Address": "kathmandu",
         "Email": "rambhahadu@gmail.com",
         "Phone_number": "9023435234"
+    },
+    {
+        "Name": "roheet",
+        "Roll_number": 31,
+        "Marks": {
+            "C": 34,
+            "Maths": 54,
+            "Python": 64
+        },
+        "Address": "bhaktpur",
+        "Email": "roheet@gmail.com",
+        "Phone_number": "3455674334"
+    },
+    {
+        "Name": "pragun",
+        "Roll_number": 28,
+        "Marks": {
+            "C": 67,
+            "Maths": 87,
+            "Python": 99
+        },
+        "Address": "kathmandu",
+        "Email": "pragun@gmail.com",
+        "Phone_number": "9312345675"
+    },
+    {
+        "Name": "swikar",
+        "Roll_number": 45,
+        "Marks": {
+            "C": 56,
+            "Maths": 54,
+            "Python": 77
+        },
+        "Address": "lalitpur",
+        "Email": "swikar@gmail.com",
+        "Phone_number": "9023454345"
+    },
+    {
+        "Name": "yahul",
+        "Roll_number": 1,
+        "Marks": {
+            "C": 4,
+            "Maths": 65,
+            "Python": 77
+        },
+        "Address": "janakpur",
+        "Email": "yahul@gmail.com",
+        "Phone_number": "4356544567"
+    },
+    {
+        "Name": "uddav",
+        "Roll_number": 48,
+        "Marks": {
+            "C": 67,
+            "Maths": 87,
+            "Python": 78
+        },
+        "Address": "lalitpur",
+        "Email": "uddav@gmail.com",
+        "Phone_number": "9840034822"
+    },
+    {
+        "Name": "ted",
+        "Roll_number": 22,
+        "Marks": {
+            "C": 56,
+            "Maths": 76,
+            "Python": 88
+        },
+        "Address": "illam",
+        "Email": "ted@gmail.com",
+        "Phone_number": "9834563456"
+    },
+    {
+        "Name": "bhawan",
+        "Roll_number": 2,
+        "Marks": {
+            "C": 56,
+            "Maths": 76,
+            "Python": 88
+        },
+        "Address": "lalitpur",
+        "Email": "bhawanjos@gmail.com",
+        "Phone_number": "9534523456"
     }
 ]

@@ -1,4 +1,13 @@
-from file_managment import *
+import sys
+import os
+
+# Adjust the sys.path to include the parent directory
+if __name__ == "__main__":
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(current_dir)
+    sys.path.append(parent_dir)
+
+from src.file_management import *
 class Teacher:
     def __init__(self):
         """
@@ -12,12 +21,30 @@ class Teacher:
         self.phone_number = ""
         
     def check_email_validation(self,email:str)-> bool:
+        """
+        A function to check if the email contains the '@' symbol.
+
+        Parameters:
+            email (str): The email address to be validated.
+
+        Returns:
+            bool: True if the email contains the '@' symbol, False otherwise.
+        """
         if "@" in email:
             return True
         else:
             return False
     
     def check_phone_number(self,phone_number:int)-> bool:
+        """
+        Check if the given phone number is valid.
+
+        Args:
+            phone_number (int): The phone number to be checked.
+
+        Returns:
+            bool: True if the phone number is valid (10 digits), False otherwise.
+        """
         if len(phone_number) == 10:
             return True
         else:
@@ -62,10 +89,10 @@ class Teacher:
             raise ValueError("Invalid email or phone number")
     def display_all(self):
         """
-        Display all the details of each teacher stored in the 'Teacher.json' file.
+        Prints the details in student.json file
 
-        This function reads the 'Teacher.json' file and iterates over each teacher's data.
-        It prints the name, subject, email, and phone number of each teacher.
+        This function reads the 'Student.json' file and iterates over each student's data.
+        It prints the name ,email, and phone number of each student.
 
         Parameters:
             self (object): The instance of the Teacher class.
@@ -74,10 +101,31 @@ class Teacher:
             None
         """
         data = read_file("data_files/Student.json")
-        for data in data:
-            print(f"Name of the student is {data['name']}")
-            print(f"Email of the student is {data['email']}")
-            print(f"Phone number of the student is {data['phone_number']}")
+        for student in data:
+            print(f"Name: {student['Name']}")
+            print(f"Email: {student['Email']}")
+            print(f"Phone: {student['Phone_number']}",end='\n\n')
+    
+    def display_teacher(self):
+        """
+        Prints the details in teacher.json file
+
+        This function reads the 'Teacher.json' file and iterates over each teacher's data.
+        It prints the name ,email, and phone number of each teacher.
+
+        Parameters:
+            self (object): The instance of the Teacher class.
+
+        Returns:
+            None
+        """
+        data = read_file("data_files/Teacher.json")
+        for teacher in data:
+            print(f"Name: {teacher['name']}")
+            print(f"Email: {teacher['email']}")
+            print(f"Phone: {teacher['phone_number']}",end='\n\n')
+   
+            
     def search(self):
         """
         Placeholder function for searching students.
@@ -89,15 +137,17 @@ class Teacher:
             None
         """
         data = read_file("data_files/Student.json")
-        Name = input(" Enter the name of the student ")
-        for name in data:
-            print(name)
-            print(f"Name of the student is {name['Name']}")
-            print(f"Email of the student is {name['email']}")
-            print(f"Phone number of the student is {name['phone_number']}")
-            print(f"Roll number of the student is {name['roll_number']}")
-            print(f"marks of the student is {name['marks']}")
-            print(f"percentage of the student is {name['percentage']}")
+        name = input("Enter the name of the student: ")
+        for student in data:
+            if student['Name'].lower() == name.lower():
+                print(f"Name: {student['Name']}")
+                print(f"Email: {student['Email']}")
+                print(f"Phone number: {student['Phone_number']}")
+                print(f"Roll number: {student['Roll_number']}")
+                print(f"Marks: {student['Marks']}")
+                return
+        print(f"No record found for student with name {name}")
+
                 
             
     def delete(self):
@@ -105,19 +155,23 @@ class Teacher:
         Deletes the full detail of the requested person.
         This function does not take any parameters and does not return anything.
         """
-        name = input("Enter the name of the Student you want to delete")
-        data = read_file("data_files/Student.json")
-        for name in data:
-            del_data = data.remove(name)
-            write_file("data_files/Student.json",del_data)
+        data = read_file("data_files/Teacher.json")
+        name = input("Enter the name of the teacher to delete: ")
+        for teacher in data:
+            if teacher['name'].lower() == name.lower():
+                data.remove(teacher)
+                write_file("data_files/Teacher.json", data)
+                print(f"Teacher {name} deleted successfully.")
+                return
+        print(f"No record found for teacher with name {name}")
             
                 
 if __name__ == "__main__":
     teacher = Teacher()
-   # teacher.accept()
-    # teacher.display_all()
-    teacher.search()
-    teacher.delete()
+    # teacher.accept()
+    teacher.display_all()
+    # teacher.search()
+    # teacher.delete()
 
         
         
