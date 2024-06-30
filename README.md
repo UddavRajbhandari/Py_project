@@ -25,9 +25,9 @@ To get started with the Student Data Management Program, follow these steps:
 ## File Structure
 
 - `main.py`: The main entry point for the application.
-- `modules/`:
-  - `student.py`: Contains the `Student` class for managing student data.
-  - `teacher.py`: Contains the `Teacher` class for managing teacher data.
+- `src/`:
+  - `class_student.py`: Contains the `Student` class for managing student data.
+  - `class_teacher.py`: Contains the `Teacher` class for managing teacher data.
   - `file_management.py`: Functions for reading, writing, and managing JSON files.
   - `authentication.py`: Handles authentication for teachers.
   - `validation.py`: Provides data validation functions.
