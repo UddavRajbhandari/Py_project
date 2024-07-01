@@ -1,10 +1,10 @@
-import sys
-import os
+# import sys
+# import os
 
-# Adjust the sys.path to include the src directory for standalone run
-if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    sys.path.append(os.path.join(current_dir, "src"))
+# # Adjust the sys.path to include the src directory for standalone run
+# if __name__ == "__main__":
+#     current_dir = os.path.dirname(os.path.abspath(__file__))
+#     sys.path.append(os.path.join(current_dir, "src"))
 
 from src import read_file, authenticate_teacher, AuthenticationError, Student, Teacher, entry
 
