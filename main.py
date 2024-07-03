@@ -9,7 +9,7 @@
 from src import read_file, authenticate_teacher, AuthenticationError, Student, Teacher, entry
 
 def add_first_teacher():
-    teacher = Teacher.Teacher()
+    teacher = Teacher()
     teacher.accept()
 def main():
     
@@ -21,8 +21,10 @@ def main():
         if not teachers:
             print("No teachers found. Please add a teacher first.")
             add_first_teacher()
-        
-        name = input("Enter your name: ")
+            
+        # namme and id of the person should be included in the teacher.json file that to be authenticated for access
+        # if teacher.json is empty input the details
+        name = input("Enter the name of teacher for access: ")
         teacher_id = input("Enter your ID: ")
 
         if not authenticate_teacher(name, teacher_id):

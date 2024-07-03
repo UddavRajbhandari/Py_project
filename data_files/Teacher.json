@@ -1,18 +1,10 @@
 [
     {
-        "name": "roheet",
-        "subject": "python",
-        "id": 31,
-        "address": "bhaktpur",
-        "email": "roheet@gmail.com",
-        "phone_number": "9983433534"
-    },
-    {
         "name": "pandey",
         "subject": "Probability",
-        "id": 55,
-        "address": "kathmandu",
+        "id": 45,
+        "address": "bhaktpur",
         "email": "pandeyji@gmail.com",
-        "phone_number": "9843234534"
+        "phone_number": "9834234534"
     }
 ]

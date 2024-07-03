@@ -30,10 +30,21 @@ class Teacher:
         Returns:
             bool: True if the email contains the '@' symbol, False otherwise.
         """
-        if "@" in email:
-            return True
-        else:
+        if "@" not in email or "." not in email:
             return False
+    
+        username, domain = email.split("@")
+    
+        if "." not in domain:
+            return False
+        
+        if not username:
+            return False
+        
+        if not domain.split(".")[0]:
+            return False
+
+        return True
     
     def check_phone_number(self,phone_number:int)-> bool:
         """
@@ -168,7 +179,7 @@ class Teacher:
                 
 if __name__ == "__main__":
     teacher = Teacher()
-    # teacher.accept()
+    teacher.accept()
     teacher.display_all()
     # teacher.search()
     # teacher.delete()
