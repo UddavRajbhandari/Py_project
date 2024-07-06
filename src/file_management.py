@@ -87,7 +87,7 @@ def validate(file_path, data, existing_data) -> bool:
         data = [data]
 
     # Check for unique identifiers based on the file path
-    for entry in data:
+    for entry in data:      
         if file_path.endswith("Student.json"):
             if "Roll_number" not in entry:
                 print("Error: 'Roll_number' key not found in the data.")

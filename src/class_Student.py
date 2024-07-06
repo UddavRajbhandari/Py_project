@@ -43,7 +43,7 @@ class Student(Teacher):
         Accepts user input for the student object and writes it to a JSON file named "Student.json".
         """
         self.input_data()
-        if self.check_phone_number(self.phone_number) == True and self.check_email_validation(self.email) == True:
+        if self.check_phone_number(self.phone_number) == True and self.validate_email_domain(self.email) == True:
             data = [{
                 "Name":self.name,
                 "Roll_number":self.roll_number,

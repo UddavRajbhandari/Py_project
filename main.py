@@ -46,6 +46,7 @@ def main():
             
             if choice == '1':
                 file_path = "data_files/Student.json"
+                teacher = Teacher()
                 new_data = {
                     "Name": input("Enter the name of the student: "),
                     "Roll_number": int(input("Enter the roll number of the student: ")),
@@ -58,8 +59,16 @@ def main():
                     "Email": input("Enter the email of the student: "),
                     "Phone_number": input("Enter the phone number of the student: ")
                 }
-                entry(name, teacher_id, file_path, new_data)
-                
+                is_email_valid = teacher.validate_email_domain(new_data["Email"])
+                is_phone_number_valid = teacher.check_phone_number(new_data["Phone_number"])
+                if is_email_valid and is_phone_number_valid:
+                    entry(name, teacher_id, file_path, new_data)
+                else:
+                    if not is_email_valid:
+                        print("Invalid email. Student data not added.")
+                    if not is_phone_number_valid:
+                        print("Invalid phone number. Student data not added.")
+     
             elif choice == '2':
                 student = Student()
                 student.search()

@@ -45,6 +45,28 @@ class Teacher:
             return False
 
         return True
+    def validate_email_domain(self,email: str) -> bool:
+        """
+        A function to check if the email is from a valid domain (gmail.com or outlook.com).
+
+        Parameters:
+            email (str): The email address to be validated.
+
+        Returns:
+            bool: True if the email is from a valid domain, False otherwise.
+        """
+        if not self.check_email_validation(email):
+            print("\n\n")
+            print("Invalid email format. Please enter again.")
+            return False
+
+        domain = email.split('@')[1]
+        if domain != 'gmail.com' and domain != 'outlook.com':
+            print("\n\n")
+            print("Invalid email domain. Please enter again.")
+            return False
+
+        return True
     
     def check_phone_number(self,phone_number:int)-> bool:
         """
@@ -56,7 +78,7 @@ class Teacher:
         Returns:
             bool: True if the phone number is valid (10 digits), False otherwise.
         """
-        if len(phone_number) == 10:
+        if len(phone_number) == 10 and phone_number.isdigit():
             return True
         else:
             return False
@@ -86,7 +108,7 @@ class Teacher:
             None
         """
         self.input_data()
-        if self.check_email_validation(self.email) == True and self.check_phone_number(self.phone_number) == True:
+        if self.validate_email_domain(self.email) == True and self.check_phone_number(self.phone_number) == True:
             data = [{
                 "name":self.name,
                 "subject":self.subject,

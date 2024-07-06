@@ -106,5 +106,17 @@
         "Address": "lalitpur",
         "Email": "bhawanjos@gmail.com",
         "Phone_number": "9534523456"
+    },
+    {
+        "Name": "jason",
+        "Roll_number": 100,
+        "Marks": {
+            "C": 56,
+            "Maths": 45,
+            "Python": 33
+        },
+        "Address": "rampur",
+        "Email": "jason@gmail.com",
+        "Phone_number": "9823435645"
     }
 ]
