@@ -69,6 +69,21 @@ class Student(Teacher):
             print(f"Phone number of the student is {data['Phone_number']}")
             print(f"Roll number of the student is {data['Roll_number']}")
             print(f"marks of the student is {data['Marks']}",end='\n\n')
+            
+    def delete(self):
+        """
+        Deletes the full detail of the requested person.
+        This function does not take any parameters and does not return anything.
+        """
+        data = read_file("data_files/Student.json")
+        name = input("Enter the name of the student to delete: ")
+        for student in data:
+            if student['Name'].lower() == name.lower():
+                data.remove(student)
+                write_file("data_files/Student.json", data)
+                print(f"Student {name} deleted successfully.")
+                return
+        print(f"No record found for student with name {name}")
 
     def search(self):
         """

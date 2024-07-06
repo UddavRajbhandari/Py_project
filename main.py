@@ -40,7 +40,8 @@ def main():
             print("4. Add New Teacher")
             print("5. Display All Teachers")
             print("6. Delete Teacher")
-            print("7. Exit")
+            print("7. Delete Student")
+            print("8. Exit")
             
             choice = input("Enter your choice: ")
             
@@ -91,6 +92,10 @@ def main():
                 teacher.delete()
             
             elif choice == '7':
+                student = Student()
+                student.delete()
+            
+            elif choice == '8':
                 print("Goodbye!")
                 break
             

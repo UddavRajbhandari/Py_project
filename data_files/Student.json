@@ -72,18 +72,6 @@
         "Phone_number": "4356544567"
     },
     {
-        "Name": "uddav",
-        "Roll_number": 48,
-        "Marks": {
-            "C": 67,
-            "Maths": 87,
-            "Python": 78
-        },
-        "Address": "lalitpur",
-        "Email": "uddav@gmail.com",
-        "Phone_number": "9840034822"
-    },
-    {
         "Name": "ted",
         "Roll_number": 22,
         "Marks": {
